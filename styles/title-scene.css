@@ -1,0 +1,40 @@
+#title-scene {
+    position: relative
+}
+
+#title-scene #contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#title-scene #contents .logo {
+    width: 360px;
+}
+
+#title-scene #contents h1 {
+    font-size: 24px;
+    color: white;
+    text-shadow: -5px 5px var(--clr-dark-brown);
+}
+
+#title-scene #contents p {
+    margin-top: 60px;
+    animation: blink 4000ms infinite;
+}
+
+#title-scene #overlay {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% {color: white;}
+    25% {color: yellow;}
+    50% {color: orange;}
+    75% {color:indigo;}
+    100% {color:white;}
+}

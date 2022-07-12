@@ -1,0 +1,32 @@
+#main-menu-scene {
+    flex-direction: column;
+}
+
+#main-menu-scene #main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 320px;
+    color: white;
+    background: url("../assets/images/ui-2.png") no-repeat;
+    background-size: 300%;
+}
+
+#main-menu-scene .window-title {
+    padding: 52px 0 8px 0;
+    font-size: 16px;
+}
+#main-menu-scene .window-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px;
+}
+
+#main-menu-scene .window-content p {
+    margin-bottom: 4px;
+    font-size: 14px;
+}

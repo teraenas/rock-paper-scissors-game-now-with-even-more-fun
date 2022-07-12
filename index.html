@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/title-scene.css">
+    <link rel="stylesheet" href="./styles/main-menu-scene.css">
+    <link rel="stylesheet" href="./styles/set-names-scene.css">
+    <link rel="stylesheet" href="./styles/play-scene.css">
+    <link rel="stylesheet" href="./styles/score-screen-scene.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <div id="canvas">
+        <div id="title-scene" class="scene">
+            <div id="contents">
+                <div class="logo"><img src="./assets/images/rock-paper-scissors-gestures.png" alt=""></div>
+                <h1>ROCK, PAPER, SCISSORS</h1>
+                <p>CLICK TO CONTINUE</p>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div id="main-menu-scene" class="scene">
+            <div id="main-menu">
+                <h2 class="window-title">MAIN MENU</h2>
+                <div class="window-content">
+                    <p>SELECT GAME MODE</p>
+                    <button id="setPVPmode-button">Player v. Player</button>
+                    <button id="setPVEmode-button">Player v. CPU</button>
+                </div>
+            </div>
+        </div>
+        <div id="set-names-scene" class="scene">
+            <div class="name-inputs">
+                <input id="player1-name-input" type="text" placeholder="Player 1">
+                <span>VS</span>
+                <input id="player2-name-input" type="text" placeholder="Player 2">
+            </div>
+            <button id="start-game-button">PLAY</button>
+            <button id="set-names-back-to-main-menu-button">BACK</button>
+        </div>
+        <div id="play-scene" class="scene">
+            <div id="names-display">
+                <div id="player1-name"></div>
+                <div id="player2-name"></div>
+            </div>
+            <div id="hands">
+                <div id="player1-hand" class="player-hand"></div>
+                <div id="player2-hand" class="player-hand"></div>
+            </div>
+            <div id="lives-display">
+                <div id="player1-lives"></div>
+                <div id="player2-lives"></div>
+            </div>
+            <div id="controls">
+                <div class="player-controls">
+                    <span>
+                        <p>Q</p>
+                        <button id="player1-rock-button"></button>
+                    </span>
+                    <span>
+                        <p>W</p>
+                        <button id="player1-paper-button"></button>
+                    </span>
+                    <span>
+                        <p>E</p>
+                        <button id="player1-scissors-button"></button>
+                    </span>
+                </div>
+                <div id="player2-controls" class="player-controls">
+                    <span>
+                        <p>I</p>
+                        <button id="player2-rock-button"></button>
+                    </span>
+                    <span>
+                        <p>O</p>
+                        <button id="player2-paper-button"></button>
+                    </span>
+                    <span>
+                        <p>P</p>
+                        <button id="player2-scissors-button"></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="score-screen-scene" class="scene">
+            <div id="winner-message"></div>
+            <button id="play-again-button">PLAY AGAIN</button>
+            <button id="back-to-main-menu-button">MAIN MENU</button>
+        </div>
+        <button id="sound-toggle-button"></button>
+    </div>
+</body>
+</html>

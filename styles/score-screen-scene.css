@@ -1,0 +1,18 @@
+#score-screen-scene {
+    flex-direction: column;
+    gap: 16px;
+}
+
+#score-screen-scene #winner-message {
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+#score-screen-scene #winner-message p + p {
+    margin-top: 10px;
+}
+
+#score-screen-scene #winner-message p span {
+    font-size: 24px;
+}

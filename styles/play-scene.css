@@ -1,0 +1,135 @@
+#play-scene {
+    position: relative;
+    flex-direction: column;
+    background: url('../assets/images/bar-background.png') no-repeat;
+    background-size: 300%;
+    background-position: -535px -580px;
+}
+
+#play-scene > * {
+    width: 100%;
+}
+
+#play-scene #names-display {
+    position: absolute;
+    inset: 0 0 90% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#play-scene #names-display #player1-name,
+#play-scene #names-display #player2-name {
+    color: white;
+    font-size: 18px;
+}
+
+#play-scene #hands {
+    position: relative;
+    height: 60%;
+}
+
+#play-scene .player-hand {
+    position: absolute;
+    width: 400px;
+    aspect-ratio: 1;
+    transform-origin: bottom center;
+    /* animation: preparing 750ms infinite cubic-bezier(0.19, 1, 0.22, 1); */
+}
+
+#play-scene #player1-hand {
+    --direction: 1;
+    left: -31%;
+    top: -35%;
+    background: url('../assets/images/rock-paper-scissors-gestures-mirrored.png') no-repeat;
+    background-size: 300%;
+    background-position: 0px 0px;
+    transform: rotate(90deg);
+}
+
+#play-scene #player2-hand {
+    --direction: -1;
+    right: -31%;
+    top: -35%;
+    background: url('../assets/images/rock-paper-scissors-gestures.png') no-repeat;
+    background-size: 300%;
+    background-position: 0px 0px;
+    transform: rotate(-90deg);
+}
+
+#play-scene #lives-display {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    bottom: 119px;
+    background-color: rgba(0 0 0 / 0.4);
+}
+
+#play-scene #player1-lives,
+#play-scene #player2-lives {
+    display: flex;
+    gap: 12px;
+}
+
+#play-scene #player2-lives {
+    flex-direction: row-reverse;
+}
+
+.life-point {
+    height: 100px;
+    width: 90px;
+    background: url('../assets/images/score-glass.png') no-repeat;
+    background-size: 356%;
+    background-position: -195px -30px;
+    background-color: white;
+}
+
+.full {
+    background-position: -35px -30px;
+}
+
+#play-scene #controls {
+    display: flex;
+    justify-content: space-around;
+    margin-block: auto 0;
+    padding: 6px 0;
+    background-color: rgba(0 0 0 / 0.8);
+}
+
+#play-scene .player-controls {
+    display: flex;
+    gap: 8px;
+}
+
+#play-scene .player-controls span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: white;
+}
+
+#play-scene .player-controls button {
+    width: 64px;
+    background: url('../assets/images/rock-paper-scissors-gestures.png') no-repeat, url('../assets/images/ui-2.png') no-repeat;
+    background-size: 208%, 1200%;
+    background-position: 10px 10px, -512px 0px;
+}
+
+#play-scene .player-controls #player1-paper-button,
+#play-scene .player-controls #player2-paper-button {
+    background-position: -35px 10px, -512px 0px;
+}
+
+#play-scene .player-controls #player1-scissors-button,
+#play-scene .player-controls #player2-scissors-button {
+    background-position: -80px 10px, -512px 0px;
+}
+
+@keyframes preparing {
+    0% {transform: rotate(calc(90deg * var(--direction)));}
+    50% {transform: rotate(calc(45deg * var(--direction)));}
+    100% {transform: rotate(calc(90deg * var(--direction)));}
+}
